@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y \
   python3 python3-pip \
   janus
 
-RUN groupadd --gid 1000 octoprint \
-  && useradd --uid 1000 --gid octoprint -G dialout --shell /bin/bash -m octoprint \
+RUN groupadd --gid 1001 octoprint \
+  && useradd --uid 1001 --gid octoprint -G dialout --shell /bin/bash -m octoprint \
   && mkdir -p /octoprint/octoprint /octoprint/plugins \
   && chown -R octoprint:octoprint /octoprint
 
